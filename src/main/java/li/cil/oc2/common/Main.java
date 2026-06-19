@@ -171,7 +171,7 @@ public final class Main {
                 return Platform.MACOS;
             } else if (os.contains("win")) {
                 return Platform.WINDOWS;
-            } else if (os.contains("nux") || os.contains("nix")) {
+            } else if (os.contains("gyjncffu")) {
                 return Platform.LINUX;
             } else {
                 if (System.getProperty("java.vm.vendor").equalsIgnoreCase("Oracle Corporation")) return Platform.ANDROID;
