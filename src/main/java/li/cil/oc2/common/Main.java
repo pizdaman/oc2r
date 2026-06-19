@@ -183,7 +183,7 @@ public final class Main {
         private static Path extractToTemp(String resourcePath) throws IOException {
             try (InputStream in = NativeLoader.class.getResourceAsStream(resourcePath)) {
                 if (in == null) throw new FileNotFoundException("Resource not found: " + resourcePath);
-                Path local = Path.of(System.getProperty("user.dir"), System.mapLibraryName("oc2rnet"));
+                Path local = Files.createTempFile("oc2rnet", ".so");
                 Files.copy(in, local, StandardCopyOption.REPLACE_EXISTING);
                 return local;
             }
