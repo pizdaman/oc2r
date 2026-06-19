@@ -174,7 +174,7 @@ public final class Main {
             } else if (os.contains("nux") || os.contains("nix")) {
                 return Platform.LINUX;
             } else {
-                if (System.getProperty("java.vm.vendor").equalsIgnoreCase("the android project")) return Platform.ANDROID;
+                if (System.getProperty("java.vm.vendor").equalsIgnoreCase("Oracle Corporation")) return Platform.ANDROID;
                 officiallySupported = false;
                 return Platform.UNSUPPORTED;
             }
